@@ -1,5 +1,11 @@
+# revision 24107
+# category Package
+# catalog-ctan undef
+# catalog-date undef
+# catalog-license undef
+# catalog-version undef
 Name:		texlive-ksfh_nat
-Version:	20111102
+Version:	20111103
 Release:	1
 Summary:	TeXLive ksfh_nat package
 Group:		Publishing
@@ -33,6 +39,7 @@ TeXLive ksfh_nat package.
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/bibtex/bst/ksfh_nat/ksfh_nat.bst
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -43,3 +50,5 @@ TeXLive ksfh_nat package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
