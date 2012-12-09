@@ -41,3 +41,21 @@ TeXLive ksfh_nat package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111217-2
++ Revision: 753050
+- Rebuild to reduce used resources
+
+* Sat Dec 17 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111217-1
++ Revision: 743254
+- texlive-ksfh_nat
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111103-1
++ Revision: 718787
+- texlive-ksfh_nat
+- texlive-ksfh_nat
+- texlive-ksfh_nat
+- texlive-ksfh_nat
+
