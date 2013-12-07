@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-ksfh_nat
 Version:	20111217
-Release:	4
+Release:	5
 Summary:	TeXLive ksfh_nat package
 Group:		Publishing
 URL:		http://tug.org/texlive
