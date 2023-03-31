@@ -1,6 +1,6 @@
 Name:		texlive-ksfh_nat
 Version:	24825
-Release:	1
+Release:	2
 Summary:	TeXLive ksfh_nat package
 Group:		Publishing
 URL:		http://tug.org/texlive
