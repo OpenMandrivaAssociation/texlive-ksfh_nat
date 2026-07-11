@@ -1,37 +1,21 @@
-Name:		texlive-ksfh_nat
-Version:	24825
-Release:	2
-Summary:	TeXLive ksfh_nat package
+%global tl_name ksfh_nat
+%global tl_revision 76790
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.1
+Release:	%{tl_revision}.1
+Summary:	BibTeX style for KSFH Munich
 Group:		Publishing
-URL:		https://tug.org/texlive
-License:	http://www.tug.org/texlive/LICENSE.TL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ksfh_nat.r%{version}.tar.xz
+URL:		https://www.ctan.org/tex-archive/biblio/bibtex/contrib/ksfh_nat
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/ksfh_nat.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-TeXLive ksfh_nat package.
+The package supports bibliographies as standard for KSFH (Katholische
+Stiftungsfachhochschule) Munich. BibTeX entries in article, book,
+inbook, incollection and misc formats are supported.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/bibtex/bst/ksfh_nat/ksfh_nat.bst
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar bibtex %{buildroot}%{_texmfdistdir}
